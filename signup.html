@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>sign up</title>
+    <link rel="stylesheet" href="style_signup.css">
+</head>
+<body>
+
+<!-- 네비바 -->
+    
+<div id="header">    
+    <div id="nav">  
+            <img id="logo" src="img/Artboard Copy 10@3x.png" height="35">
+            <ul id="menu">
+                <li><a href="Loan.html">대출하기</a></li>
+                <li><a href="Investment.html">투자하기</a></li>
+                <li><a href="Mypage.html">마이페이지</a></li>
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="signup.html" style="color: blue; font-weight: bold;">회원가입</a></li>
+            </ul>
+    </div> 
+</div>
+
+<!-- 네비바 아래 라인 -->
+
+<hr class="one">
+
+<!-- 회원가입 -->
+
+<div id="all">
+    <div id="main_content">
+        <h1>Sign Up</h1>
+
+        <form th:action="@{/user}" method="POST">
+            <div id="email">
+                email : <input type="text" name="email"> <br>
+            </div>
+            <div id="pw">
+                password : <input type="password" name="password"> <br>
+            </div>
+            <div id="name">
+                name : <input type="text" name="name"> <br>
+            </div>
+            <div id="socialNumber">
+                social number : <input type="text" name="socialNumber"> <br>
+            </div>
+            <div id="mobileNumber">
+                 mobile number : <input type="text" name="mobileNumber"> <br>
+            </div>
+            <div id="account">
+                account : <input type="text" name="account"> <br>
+            </div>
+            <div id="balance">
+                  balance : <input type="text" name="balance"> <br>
+            </div>
+            <div id="signat">
+                sign at : <input type="date" name="signAt"> <br>
+            </div>
+
+            <div id="auth">
+                <input type="radio" name="auth" value="ROLE_ADMIN,ROLE_USER"> admin
+                <input type="radio" name="auth" value="ROLE_USER" checked="checked"> user <br>
+            </div>
+
+            <button type="submit" id="btn">Join</button>
+        </form> <br>
+
+        <a href="/login">Go to login →</a>
+
+    </div>
+    
+</div>
+</body>
+</html>
